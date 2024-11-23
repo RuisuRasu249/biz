@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet, ActivatedRoute } from '@angular/router';
 import { DataService } from './data.service';
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'business',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CommonModule],
   providers: [DataService],
   templateUrl: './business1.component.html',
   styleUrl: './business1.component.css'
