@@ -16,4 +16,14 @@ export class DataService{
         return Math.ceil(jsonData.length / this.pageSize);
     }
 
+    getBusiness(id: any){
+        let dataToReturn: any[] = [];
+        jsonData.forEach(function(business){
+            if(business['name'] == id){
+                dataToReturn.push(business)
+            }
+        })
+        return dataToReturn;
+    }
+
 }
