@@ -19,6 +19,7 @@ export class Business1Component {
   business_lng: any;
   map_options: google.maps.MapOptions = {};
   map_locations: any[] = [];
+  loremIpsum: any;
 
   constructor(public dataService: DataService, private route: ActivatedRoute){}
 
@@ -42,6 +43,12 @@ export class Business1Component {
         },
         zoom: 13
       };
+
+      this.dataService.getLoremIpsum(1)
+      .subscribe( (response:any) => {
+        this.loremIpsum = response.text.slice(0, 400);
+      });
+
     }
   }
 }
