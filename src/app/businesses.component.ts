@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterModule } from '@angular/router';
 import { DataService } from './data.service';
 
 @Component({
   selector: 'businesses',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterModule],
   providers: [DataService],
   templateUrl: './business.component.html',
   styleUrl: './business.component.css'
